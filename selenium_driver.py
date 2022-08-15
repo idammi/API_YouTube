@@ -31,7 +31,7 @@ class BaseClass:
     def xpath_exists(self, xpath):
 
         try:
-            self.DRIVER.implicitly_wait(5)
+            self.DRIVER.implicitly_wait(15)
             self.DRIVER.find_element(By.XPATH, value=xpath)
             exist = True
         except NoSuchElementException:
