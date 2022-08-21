@@ -55,6 +55,10 @@ class YouTube(BaseClass):
             time.sleep(random.uniform(.5, 2))
             self.DRIVER.find_element(By.XPATH, value='//input[@type="password"]').send_keys(Keys.ENTER)
 
+            # press button "Not now" on question "If you’d like, take a few moments to help Google work better for you"
+            if self.xpath_exists('//button'):
+                self.DRIVER.find_element(By.XPATH, value='//button').click()
+
             # if self.xpath_exists('//tp-yt-paper-button[@aria-label="Sign in"]'):
             if self.xpath_exists('//tp-yt-paper-button[@aria-label="Войти"]'):
                 self.auth()  # This func links on the self
@@ -120,7 +124,7 @@ class YouTube(BaseClass):
             if self.xpath_exists('//tp-yt-paper-radio-button[@name="VIDEO_MADE_FOR_KIDS_MFK"]'):
 
                 # click on the radio-button "for kids"
-                self.DRIVER.find_elements('//tp-yt-paper-radio-button[@name="VIDEO_MADE_FOR_KIDS_MFK"]/div/div')[1].click()
+                self.DRIVER.find_elements('class="style-scope tp-yt-paper-radio-button"')[0].click()
 
             else:
                 print('xpath radio "for kids" don\'t work')
@@ -207,3 +211,4 @@ class YouTube(BaseClass):
     # ToDO: через map iter func and list video
     # ToDo: checker exists file or video in dir
     # ToDo: del vidos при нарушении авторских прав, можно відівать ошибку
+    # ToDo: auth сделать в том случае если нет папки с profile

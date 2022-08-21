@@ -10,7 +10,7 @@ def main():
 
     youtube_ = YouTube(DRIVER)
     youtube_.auth("danilkhorosun@gmail.com", "555gta555")
-    youtube_.upload_video(r"C:\Users\Admin\Downloads\ssstik.io_1660218161909.mp4", 'lol', '#kek')
+    youtube_.upload_video(r"C:\Users\Username\Downloads\download.mp4", 'lol_name', '#kek #my_video')
 
     # ToDo: отдельный файл для получения логина и пароля
 
