@@ -9,12 +9,8 @@ def main():
     DRIVER = base.driver()
 
     youtube_ = YouTube(DRIVER)
-    youtube_.auth("e56333180@gmail.com", "Jesus8800")
-    # youtube_.auth("danilkhorosun@gmail.com", "555gta555")
-    # youtube_.auth("e48320035@gmail.com", "Jesus8800")
-    youtube_.upload_video(r"C:\Users\Username\Downloads\download.mp4", 'Name video is None', '#rap #mine_first_video')
-
-    # ToDo: отдельный файл для получения логина и
+    youtube_.auth("your_account@gmail.com", "Your password")
+    youtube_.upload_video(r"C:\Users\Username\Downloads\upload.mp4", 'Name video', '#mine_first_video #hastags_for_the_video')
 
     DRIVER.close()
     DRIVER.quit()
