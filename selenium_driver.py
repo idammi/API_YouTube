@@ -14,6 +14,7 @@ class BaseClass:
 
         chrome_options = uc.ChromeOptions()
 
+        #chrome_options.add_argument("--disable-gpu") # if headless
         chrome_options.add_argument("--disable-extensions")  # отключает рассширения
         chrome_options.add_argument("--disable-popup-blocking")  # отключает блокировку всплывающих окон
         chrome_options.add_argument("--incognito")
