@@ -48,7 +48,6 @@ class YouTube(BaseClass):
 
         # button войти
         self.DRIVER.implicitly_wait(10)
-        #self.DRIVER.find_element(By.XPATH, value='//div[@id="buttons"]/ytd-button-renderer/yt-button-shape').click()
         self.DRIVER.find_element(By.XPATH, value='//tp-yt-paper-button[@aria-label="Sign in"]').click()
 
 
@@ -213,9 +212,3 @@ class YouTube(BaseClass):
         self.page4_upload_video()
 
         self.page5_upload_video()
-
-
-    # ToDO: через map iter func and list video
-    # ToDo: checker exists file or video in dir
-    # ToDo: del vidos при нарушении авторских прав, можно відівать ошибку
-    # ToDo: auth сделать в том случае если нет папки с profile
